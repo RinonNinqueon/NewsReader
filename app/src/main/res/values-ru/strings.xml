@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Читалка Новостей</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="action_channels_import">Импорт</string>
+    <string name="action_channels_export">Экпорт</string>
+
+    <string name="dialog_export_title">Информация</string>
+    <string name="dialog_export_success">Список каналов экспортирован.</string>
+    <string name="dialog_import_success">Список каналов импортирован.</string>
+
+    <string name="popup_modify">Изменить</string>
+    <string name="popup_delete">Удалить</string>
+
+    <string name="no_entries">Ничего нет</string>
+</resources>

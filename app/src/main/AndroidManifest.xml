@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="rinon.ninqueon.rssreader">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="rinon.ninqueon.rssreader.RSSReader"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <service
+            android:name="rinon.ninqueon.rssreader.services.BackgroundUpdateIntentService"
+            android:exported="false">
+
+        </service>
+        <service
+            android:name="rinon.ninqueon.rssreader.services.BindedService"
+            android:exported="false">
+
+        </service>
+
+        <receiver android:name="rinon.ninqueon.rssreader.services.BootReceiver"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="rinon.ninqueon.rssreader.view.drawer.DrawerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="rinon.ninqueon.rssreader.view.feedEntryScreen.FeedEntryActivity">
+        </activity>
+        <activity android:name="rinon.ninqueon.rssreader.view.channelFeedScreen.ChannelFeedActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="text/xml"/>
+                <data android:mimeType="text/rss+xml"/>
+                <data android:mimeType="text/atom+xml"/>
+                <data android:mimeType="application/xml"/>
+                <data android:mimeType="application/rss+xml"/>
+                <data android:mimeType="application/atom+xml"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="rinon.ninqueon.rssreader.view.settingsScreen.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="rinon.ninqueon.rssreader.view.ToolbarActivity">
+        </activity>
+    </application>
+
+</manifest>

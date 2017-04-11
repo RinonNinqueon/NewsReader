@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download_error">Connection error!</string>
+    <string name="download_start">Updating…</string>
+    <string name="download_xml_get_success">Downloading…</string>
+    <string name="download_xml_parse_success">Parsing… </string>
+    <string name="download_ready_to_write_db">Writing into DB…</string>
+    <string name="download_write_db_success">Ready!</string>
+</resources>

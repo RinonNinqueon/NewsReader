@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_channel_add_title">Add subscription</string>
+    <string name="dialog_channel_url_hint">URL</string>
+    <string name="dialog_channel_button_add">Add</string>
+    <string name="dialog_channel_button_cancel">Cancel</string>
+    <string name="dialog_channel_button_close">Close</string>
+    <string name="dialog_channel_error">Error</string>
+    <string name="error_channel_exists">You are already subscribed.</string>
+</resources>

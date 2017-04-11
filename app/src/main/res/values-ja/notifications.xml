@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_title">新報道があります</string>
+    <string name="notification_content">新報道数：</string>
+    <string name="notification_updating">更新中・・・</string>
+</resources>

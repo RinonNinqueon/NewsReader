@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">設定</string>
+    <string name="settings_category_net">ネット</string>
+    <string name="settings_category_update">更新</string>
+    <string name="settings_category_data">データ</string>
+
+    <string name="settings_application_theme_title">テーマ</string>
+    <string name="settings_application_theme_hint">アプリケーションのカラーテーマです</string>
+    <string name="settings_application_theme_dialog_title">テーマを選べてください</string>
+    <string-array name="settings_application_theme_list">
+        <item>明るい</item>
+        <item>暗い</item>
+    </string-array>
+
+    <string name="settings_update_on_start_title">起動の時に更新</string>
+    <string name="settings_update_on_start_hint">データを起動の時に更新します</string>
+
+    <string name="settings_update_on_wifi_title">WiFiモード</string>
+    <string name="settings_update_on_wifi_hint">WiFiだけでロードします。</string>
+
+    <string name="settings_update_enable_title">背景更新</string>
+    <string name="settings_update_enable_hint">アプリケーションが閉じたら、更新します</string>
+
+    <string name="settings_update_period_title">更新期間</string>
+    <string name="settings_update_period_hint">購読の更新期間です</string>
+    <string name="settings_update_period_dialog_title">期間を時数で入力してください</string>
+
+    <string name="settings_notification_enable_title">通知</string>
+    <string name="settings_notification_enable_hint">通知を表示します</string>
+
+    <string name="settings_feed_save_period_title">保存の期間</string>
+    <string name="settings_feed_save_period_hint">データの保存の期間のです</string>
+    <string name="settings_feed_save_period_dialog_title">期間を日数で入力してください。\nゼロは無制限です</string>
+
+    <string name="settings_clear_database_title">データを削除</string>
+    <string name="settings_clear_database_hint">全てのデータを削除します</string>
+    <string name="settings_clear_database_warning">あなたは確かなですか？</string>
+    <string name="settings_clear_database_warning_yes">はい</string>
+    <string name="settings_clear_database_warning_no">いいえ</string>
+
+</resources>

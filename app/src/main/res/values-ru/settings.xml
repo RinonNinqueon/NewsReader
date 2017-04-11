@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_category_net">Сеть</string>
+    <string name="settings_category_update">Обновление</string>
+    <string name="settings_category_data">Данные</string>
+
+    <string name="settings_application_theme_title">Тема</string>
+    <string name="settings_application_theme_hint">Цветовая тема приложения</string>
+    <string name="settings_application_theme_dialog_title">Выберите тему</string>
+    <string-array name="settings_application_theme_list">
+        <item>Светлая</item>
+        <item>Тёмная</item>
+    </string-array>
+
+    <string name="settings_update_on_start_title">Обновлять при старте</string>
+    <string name="settings_update_on_start_hint">Обновлять ленту новостей при старте приложения</string>
+
+    <string name="settings_update_on_wifi_title">Только WiFi</string>
+    <string name="settings_update_on_wifi_hint">Загружать ленту новостей только в WiFi сетях</string>
+
+    <string name="settings_update_enable_title">Обновлять в фоне</string>
+    <string name="settings_update_enable_hint">Загружать новости при закрытом приложении</string>
+
+    <string name="settings_update_period_title">Период обновления</string>
+    <string name="settings_update_period_hint">Как часто обновлять новости в фоне</string>
+    <string name="settings_update_period_dialog_title">Введите период обновления в часах.</string>
+
+    <string name="settings_notification_enable_title">Уведомления</string>
+    <string name="settings_notification_enable_hint">Показывать уведомления</string>
+
+    <string name="settings_feed_save_period_title">Срок хранения</string>
+    <string name="settings_feed_save_period_hint">Как долго хранить новости</string>
+    <string name="settings_feed_save_period_dialog_title">Введите количество дней.\nНоль - без ограничений.</string>
+
+    <string name="settings_clear_database_title">Очистить кэш</string>
+    <string name="settings_clear_database_hint">Удалить всю ленту новостей</string>
+    <string name="settings_clear_database_warning">Вы уверены?</string>
+    <string name="settings_clear_database_warning_yes">Да</string>
+    <string name="settings_clear_database_warning_no">Нет</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_internet_connection">接続がありません。\n
+	接続を確認してもう一度お試しください。</string>
+    <string name="error_only_wifi">WiFiモード中です。\n
+    Wi-Fiをオンにするかアプリの設定を変更してください。</string>
+    <string name="error_wrong_url">無効なURLです。</string>
+    <string name="error_parse">無効なXMLです。</string>
+    <string name="error_document_type">不明なデータタイプです。</string>
+    <string name="error_database">データベースエラーです。</string>
+    <string name="error_io">入出力エラーです。</string>
+    <string name="error_external_storage">外部ストレージは利用できません。</string>
+    <string name="error_unchecked">チェックするために更新してください。</string>
+    <string name="error_connection">接続エラーです。</string>
+    <string name="error_no_error">エラーがありません。</string>
+    <string name="error">エラーです。</string>
+</resources>

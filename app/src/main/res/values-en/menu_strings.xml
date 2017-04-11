@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_open">Open menu</string>
+    <string name="menu_close">Close menu</string>
+
+    <string name="menu_news_title">Feed</string>
+    <string name="menu_channels_title">Subscription</string>
+
+    <string-array name="menu_items">
+        <item>Feed</item>
+        <item>Subscribes</item>
+    </string-array>
+
+    <string name="menu_channel_add">Add</string>
+
+    <string name="menu_feed_entry_share">Share</string>
+    <string name="menu_feed_entry_open_in_browser">Open in browser</string>
+    <string name="menu_news_refresh">Update</string>
+</resources>

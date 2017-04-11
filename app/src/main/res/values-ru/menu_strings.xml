@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_open">Открыть меню</string>
+    <string name="menu_close">Закрыть меню</string>
+
+    <string name="menu_news_title">Новости</string>
+    <string name="menu_channels_title">Подписки</string>
+
+    <string-array name="menu_items">
+        <item>Новости</item>
+        <item>Подписки</item>
+    </string-array>
+
+    <string name="menu_channel_add">Добавить</string>
+
+    <string name="menu_feed_entry_share">Поделиться</string>
+    <string name="menu_feed_entry_open_in_browser">Открыть в браузере</string>
+    <string name="menu_news_refresh">Обновить</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download_error">Ошибка соединения!</string>
+    <string name="download_start">Обновление…</string>
+    <string name="download_xml_get_success">Загружаю… </string>
+    <string name="download_xml_parse_success">Анализирую… </string>
+    <string name="download_ready_to_write_db">Пишем в БД…</string>
+    <string name="download_write_db_success">Готово!</string>
+</resources>

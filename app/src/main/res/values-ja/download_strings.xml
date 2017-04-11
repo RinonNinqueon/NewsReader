@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="download_error">接続エラーです！</string>
+    <string name="download_start">更新中・・・</string>
+    <string name="download_xml_get_success">ダウンロード中・・・</string>
+    <string name="download_xml_parse_success">解析中・・・</string>
+    <string name="download_ready_to_write_db">データベースに書き込む中・・・</string>
+    <string name="download_write_db_success">>出来ました！</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_channel_add_title">Добавьте канал</string>
+    <string name="dialog_channel_url_hint">URL</string>
+    <string name="dialog_channel_button_add">Добавить</string>
+    <string name="dialog_channel_button_cancel">Отмена</string>
+    <string name="dialog_channel_button_close">Закрыть</string>
+    <string name="dialog_channel_error">Ошибка</string>
+    <string name="error_channel_exists">Вы уже подписаны.</string>
+</resources>

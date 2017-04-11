@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_open">メニューを開きます</string>
+    <string name="menu_close">メニューを閉じます</string>
+
+    <string name="menu_news_title">フィード</string>
+    <string name="menu_channels_title">購読</string>
+
+    <string-array name="menu_items">
+        <item>フィード</item>
+        <item>購読</item>
+    </string-array>
+
+    <string name="menu_channel_add">追加</string>
+
+    <string name="menu_feed_entry_share">シェア</string>
+    <string name="menu_feed_entry_open_in_browser">ブラウザで開きます</string>
+    <string name="menu_news_refresh">更新します</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_title">Есть новые новости</string>
+    <string name="notification_content">Новых событий:</string>
+    <string name="notification_updating">Обновляем ленту новостей</string>
+</resources>

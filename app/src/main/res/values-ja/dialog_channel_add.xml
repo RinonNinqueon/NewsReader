@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_channel_add_title">購読を追加します</string>
+    <string name="dialog_channel_url_hint">URL</string>
+    <string name="dialog_channel_button_add">追加</string>
+    <string name="dialog_channel_button_cancel">キャンセル</string>
+    <string name="dialog_channel_button_close">閉じます</string>
+    <string name="dialog_channel_error">エラー</string>
+    <string name="error_channel_exists">もう購読しました。</string>
+</resources>

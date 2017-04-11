@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Settings</string>
+    <string name="settings_category_net">Network</string>
+    <string name="settings_category_update">Updating</string>
+    <string name="settings_category_data">Data</string>
+
+    <string name="settings_application_theme_title">Theme</string>
+    <string name="settings_application_theme_hint">Application theme</string>
+    <string name="settings_application_theme_dialog_title">Select theme</string>
+    <string-array name="settings_application_theme_list">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string name="settings_update_on_start_title">Update on startup</string>
+    <string name="settings_update_on_start_hint">Update your subscriptions on startup</string>
+
+    <string name="settings_update_on_wifi_title">Only WiFi</string>
+    <string name="settings_update_on_wifi_hint">Update subscriptions only through WiFi</string>
+
+    <string name="settings_update_enable_title">Update in background</string>
+    <string name="settings_update_enable_hint">Update subscriptions out of application</string>
+
+    <string name="settings_update_period_title">Update period</string>
+    <string name="settings_update_period_hint">Update every few hours</string>
+    <string name="settings_update_period_dialog_title">Enter period in hours.</string>
+
+    <string name="settings_notification_enable_title">Notifications</string>
+    <string name="settings_notification_enable_hint">Show notifications</string>
+
+    <string name="settings_feed_save_period_title">Save period</string>
+    <string name="settings_feed_save_period_hint">How long should data be saved</string>
+    <string name="settings_feed_save_period_dialog_title">Enter period in days.\nZero - always.</string>
+
+    <string name="settings_clear_database_title">Clear cache</string>
+    <string name="settings_clear_database_hint">Delete all news entries</string>
+    <string name="settings_clear_database_warning">Are you sure?</string>
+    <string name="settings_clear_database_warning_yes">Yes</string>
+    <string name="settings_clear_database_warning_no">No</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_internet_connection">No connection.\n
+    Please check your connection and try again.</string>
+    <string name="error_only_wifi">"Only WiFi" mode.\n
+    Turn on Wi-fi or change application settings.</string>
+    <string name="error_wrong_url">Invalid URL.</string>
+    <string name="error_parse">Invalid XML.</string>
+    <string name="error_document_type">Unsupportable data format.</string>
+    <string name="error_database">Database error.</string>
+    <string name="error_io">Input-output error.</string>
+    <string name="error_external_storage">External storage is unavailable.</string>
+    <string name="error_unchecked">Start updating to check status.</string>
+    <string name="error_connection">Connection error.</string>
+    <string name="error_no_error">No errors.</string>
+    <string name="error">Error.</string>
+</resources>

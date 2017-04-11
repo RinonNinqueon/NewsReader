@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">News Reader</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_channels_import">Import</string>
+    <string name="action_channels_export">Export</string>
+
+    <string name="dialog_export_title">Info</string>
+    <string name="dialog_export_success">Subscriptions list was exported.</string>
+    <string name="dialog_import_success">Subscriptions list was imported.</string>
+
+    <string name="popup_modify">Modify</string>
+    <string name="popup_delete">Delete</string>
+
+    <string name="no_entries">Noting to display</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:components="http://schemas.android.com/apk/lib/rinon.ninqueon.rssreader.view.components">
+    <ListPreference
+        android:key="@string/settings_application_theme"
+        android:title="@string/settings_application_theme_title"
+        android:summary="@string/settings_application_theme_hint"
+        android:defaultValue="@string/settings_application_theme_default"
+        android:entries="@array/settings_application_theme_list"
+        android:entryValues="@array/settings_application_theme_list_values"
+        android:dialogTitle="@string/settings_application_theme_dialog_title" />
+    <PreferenceCategory
+        android:title="@string/settings_category_net">
+        <CheckBoxPreference
+            android:title="@string/settings_update_on_start_title"
+            android:summary="@string/settings_update_on_start_hint"
+            android:key="@string/settings_update_on_start"
+            android:defaultValue="@bool/settings_update_on_start_default"/>
+        <CheckBoxPreference
+            android:title="@string/settings_update_on_wifi_title"
+            android:summary="@string/settings_update_on_wifi_hint"
+            android:key="@string/settings_update_on_wifi"
+            android:defaultValue="@bool/settings_update_on_wifi_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_category_update">
+        <CheckBoxPreference
+            android:title="@string/settings_update_enable_title"
+            android:summary="@string/settings_update_enable_hint"
+            android:key="@string/settings_update_enable"
+            android:defaultValue="@bool/settings_update_enable_default"/>
+        <!--suppress AndroidElementNotAllowed -->
+        <rinon.ninqueon.rssreader.view.components.SeekBarPreference
+            android:title="@string/settings_update_period_title"
+            android:summary="@string/settings_update_period_hint"
+            android:key="@string/settings_update_period"
+            android:defaultValue="@integer/settings_update_period_default"
+            components:postfix_plurals="hours"
+            components:minimum="@integer/settings_update_period_minimum"
+            components:maximum="@integer/settings_update_period_maximum"
+            android:dialogTitle="@string/settings_update_period_dialog_title"
+            style="@style/AppPreference.DialogPreference" />
+        <CheckBoxPreference
+            android:title="@string/settings_notification_enable_title"
+            android:summary="@string/settings_notification_enable_hint"
+            android:key="@string/settings_notification_enable"
+            android:defaultValue="@bool/settings_notification_enable_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_category_data">
+        <!--suppress AndroidElementNotAllowed -->
+        <rinon.ninqueon.rssreader.view.components.SeekBarPreference
+            android:title="@string/settings_feed_save_period_title"
+            android:summary="@string/settings_feed_save_period_hint"
+            android:key="@string/settings_feed_save_period"
+            android:defaultValue="@integer/settings_feed_save_period_default"
+            components:postfix_plurals="days"
+            components:minimum="@integer/settings_feed_save_period_minimum"
+            components:maximum="@integer/settings_feed_save_period_maximum"
+            android:dialogTitle="@string/settings_feed_save_period_dialog_title"
+            style="@style/AppPreference.DialogPreference" />
+        <Preference android:title="@string/settings_clear_database_title"
+                    android:summary="@string/settings_clear_database_hint"
+                    android:key="@string/settings_clear_database"/>
+    </PreferenceCategory>
+</PreferenceScreen>
