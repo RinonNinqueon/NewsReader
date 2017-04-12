@@ -196,21 +196,6 @@ final class ChannelsView
 
     final void showErrorDialog(final int messageId)
     {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-        builder.setNegativeButton(R.string.dialog_channel_button_close,
-                new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(final DialogInterface dialog, final int which)
-                    {
-                        dialog.cancel();
-                    }
-                })
-                .setTitle(R.string.dialog_channel_error)
-                .setMessage(messageId)
-                .create();
-
-        builder.show();
+        showDialog(R.string.dialog_channel_error, messageId);
     }
 }

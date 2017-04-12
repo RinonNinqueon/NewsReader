@@ -30,6 +30,7 @@ final class ChannelFeedBroadcastReceiver extends BroadcastReceiver
     {
         final IntentFilter filter = new IntentFilter(BindedService.ACTION_CHANNEL_ITEMS_READ);
         filter.addAction(BindedService.ACTION_LOAD_URL);
+        filter.addAction(BindedService.ACTION_CHANNEL_ADD);
         filter.addAction(BindedService.ACTION_ERROR);
         filter.addAction(BindedService.ACTION_CRITICAL_ERROR);
         LocalBroadcastManager.getInstance(context).registerReceiver(this, filter);
@@ -55,6 +56,10 @@ final class ChannelFeedBroadcastReceiver extends BroadcastReceiver
         if (intent.getAction().equals(BindedService.ACTION_LOAD_URL))
         {
             channelFeedController.addFeedFromService();
+        }
+        if (intent.getAction().equals(BindedService.ACTION_CHANNEL_ADD))
+        {
+            channelFeedController.onChannelAdd();
         }
         if (intent.getAction().equals(BindedService.ACTION_ERROR))
         {

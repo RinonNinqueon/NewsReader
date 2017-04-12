@@ -5,9 +5,10 @@
     <string name="action_channels_import">Import</string>
     <string name="action_channels_export">Export</string>
 
-    <string name="dialog_export_title">Info</string>
+    <string name="dialog_information_title">Info</string>
     <string name="dialog_export_success">Subscriptions list was exported.</string>
     <string name="dialog_import_success">Subscriptions list was imported.</string>
+    <string name="dialog_add_success">Subscription was added.</string>
 
     <string name="popup_modify">Modify</string>
     <string name="popup_delete">Delete</string>

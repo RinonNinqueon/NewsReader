@@ -78,14 +78,7 @@ final class FeedEntryController
             return null;
         }
 
-        final FeedEntry[] entries = BundleConverter.bundleToFeedEntries(args);
-
-        if (entries != null && entries.length == 1)
-        {
-            return  entries[0];
-        }
-
-        return null;
+        return BundleConverter.bundleToFeedEntries(args);
     }
 
     final void onOptionsItemSelected(final MenuItem item)

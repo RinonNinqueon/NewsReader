@@ -89,7 +89,7 @@ final class ChannelFeedView
         ((ToolbarActivity)context).setTitle(textId);
     }
 
-    final void showErrorDialog(final int messageId)
+    final void showDialog(final int titleId, final int messageId)
     {
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
@@ -102,10 +102,15 @@ final class ChannelFeedView
                         dialog.cancel();
                     }
                 })
-                .setTitle(R.string.dialog_channel_error)
+                .setTitle(titleId)
                 .setMessage(messageId)
                 .create();
 
         builder.show();
+    }
+
+    final void showErrorDialog(final int messageId)
+    {
+        showDialog(R.string.dialog_channel_error, messageId);
     }
 }

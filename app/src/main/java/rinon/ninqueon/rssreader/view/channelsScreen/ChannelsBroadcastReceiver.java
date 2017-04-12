@@ -78,12 +78,12 @@ final class ChannelsBroadcastReceiver extends BroadcastReceiver
         }
         if (intent.getAction().equals(BindedService.ACTION_CHANNELS_EXPORT))
         {
-            channelsController.showDialog(R.string.dialog_export_title, R.string.dialog_export_success);
+            channelsController.showDialog(R.string.dialog_information_title, R.string.dialog_export_success);
             channelsController.unBindService();
         }
         if (intent.getAction().equals(BindedService.ACTION_CHANNELS_IMPORT))
         {
-            channelsController.showDialog(R.string.dialog_export_title, R.string.dialog_import_success);
+            channelsController.showDialog(R.string.dialog_information_title, R.string.dialog_import_success);
             channelsController.startReadChannels();
         }
         if (intent.getAction().equals(BindedService.ACTION_CHANNELS_UPDATE))

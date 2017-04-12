@@ -135,6 +135,7 @@ public class BindedService extends Service
 
     private void sendIntentMessage(final Intent intent)
     {
+        logger.info("sendIntentMessage");
         Message msg = serviceHandler.obtainMessage();
         msg.obj = intent;
         serviceHandler.sendMessage(msg);
@@ -144,7 +145,7 @@ public class BindedService extends Service
     {
         logger.info("isBinded=" + isBinded);
 
-        if (!isBinded && !isStarted)
+        if (!isBinded && !isStarted && lock != null)
         {
             synchronized(lock)
             {
@@ -1091,10 +1092,12 @@ public class BindedService extends Service
     {
         public BindedService getService()
         {
+            logger.info("getService");
             isBinded = true;
             isStarted = false;
             synchronized(lock)
             {
+                logger.info("lock.notify");
                 lock.notify();
             }
             return BindedService.this;

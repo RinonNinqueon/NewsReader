@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import rinon.ninqueon.rssreader.R;
 import rinon.ninqueon.rssreader.database.DataBaseHelper;
@@ -35,6 +36,9 @@ final class ChannelFeedController
     private BindedService bindedService;
     private final ServiceConnection serviceConnection;
     private boolean serviceIsBinded;
+
+    private final static String LOGGER_TAG                  = ChannelFeedController.class.getName();
+    private final static Logger logger                      = Logger.getLogger(LOGGER_TAG);
 
     private final ChannelFeedModel channelFeedModel;
     private final ChannelFeedView channelFeedView;
@@ -60,23 +64,13 @@ final class ChannelFeedController
         rawXml = false;
         xmlUrl = null;
         serviceIsBinded = false;
-        final FeedEntry channel = getFeedEntry(intent);
-        if (channel != null)
-        {
-            channelFeedModel = new ChannelFeedModel(channel.getId(), channel.getTitle());
-        }
-        else
-        {
-            channelFeedModel = new ChannelFeedModel(FeedEntry.DEFAULT_ID, null);
-        }
-        channelFeedView = new ChannelFeedView(context, rootView, channelFeedModel.getFeedEntries(), this);
-
         serviceConnection = new ServiceConnection()
         {
 
             @Override
             public void onServiceConnected(final ComponentName className, final IBinder service)
             {
+                logger.info("onServiceConnected");
                 final BindedService.LocalBinder binder = (BindedService.LocalBinder) service;
                 bindedService = binder.getService();
                 serviceIsBinded = true;
@@ -89,6 +83,17 @@ final class ChannelFeedController
                 serviceIsBinded = false;
             }
         };
+
+        final FeedEntry channel = getFeedEntry(intent);
+        if (channel != null)
+        {
+            channelFeedModel = new ChannelFeedModel(channel.getId(), channel.getTitle());
+        }
+        else
+        {
+            channelFeedModel = new ChannelFeedModel(FeedEntry.DEFAULT_ID, null);
+        }
+        channelFeedView = new ChannelFeedView(context, rootView, channelFeedModel.getFeedEntries(), this);
     }
 
     final void onCreate(@Nullable final Bundle savedInstanceState)
@@ -219,6 +224,7 @@ final class ChannelFeedController
 
     private FeedEntry getFeedEntry(final Intent intent)
     {
+        logger.info("getFeedEntry");
         if (intent == null)
         {
             return null;
@@ -229,6 +235,7 @@ final class ChannelFeedController
         if (action != null && action.equals(Intent.ACTION_VIEW))
         {
             final Uri uri = intent.getData();
+            logger.info("Uri = " + uri);
             if (uri != null)
             {
                 xmlUrl = uri.toString();
@@ -249,18 +256,12 @@ final class ChannelFeedController
             return null;
         }
 
-        final FeedEntry[] entries = BundleConverter.bundleToFeedEntries(args);
-
-        if (entries != null && entries.length == 1)
-        {
-            return  entries[0];
-        }
-
-        return null;
+        return BundleConverter.bundleToFeedEntries(args);
     }
 
     final void addItemsFromService()
     {
+        logger.info("addItemsFromService");
         if (bindedService == null)
         {
             return;
@@ -283,6 +284,7 @@ final class ChannelFeedController
 
     final void addFeedFromService()
     {
+        logger.info("addFeedFromService");
         if (bindedService == null)
         {
             return;
@@ -317,6 +319,7 @@ final class ChannelFeedController
 
     private void startReadItems()
     {
+        logger.info("startReadItems");
         setUpdating(false);
         final long channelId = channelFeedModel.getChannelId();
         if (channelId != FeedEntry.DEFAULT_ID)
@@ -358,6 +361,7 @@ final class ChannelFeedController
 
     final void checkAndLoadDataFromService()
     {
+        logger.info("checkAndLoadDataFromService");
         if (bindedService != null)
         {
             if (bindedService.dataAvailable())
@@ -398,21 +402,35 @@ final class ChannelFeedController
         }
     }
 
+    final void onChannelAdd()
+    {
+        showDialog(R.string.dialog_information_title, R.string.dialog_add_success);
+        unBindService();
+    }
+
     final void showErrorDialog(final int errorCode)
     {
         channelFeedView.showErrorDialog(ErrorCodes.getErrorMessageId(errorCode));
         unBindService();
     }
 
+    private void showDialog(final int titleId, final int messageId)
+    {
+        channelFeedView.showDialog(titleId, messageId);
+    }
+
     private void bindService(final Intent intent)
     {
+        logger.info("bindService " + intent);
         context.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
     final void unBindService()
     {
+        logger.info("unBindService");
         if (serviceIsBinded || bindedService != null)
         {
+            logger.info("Call unbindService");
             context.unbindService(serviceConnection);
             bindedService = null;
             serviceIsBinded = false;
